@@ -1,0 +1,101 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'create-react-app',
+1 verbose cli   '/Applications/MAMP/htdocs/html/my-app' ]
+2 info using npm@3.10.10
+3 info using node@v6.10.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData create-react-app
+8 silly fetchPackageMetaData /Applications/MAMP/htdocs/html/my-app
+9 silly fetchNamedPackageData create-react-app
+10 silly mapToRegistry name create-react-app
+11 silly mapToRegistry using default registry
+12 silly mapToRegistry registry https://registry.npmjs.org/
+13 silly mapToRegistry data Result {
+13 silly mapToRegistry   raw: 'create-react-app',
+13 silly mapToRegistry   scope: null,
+13 silly mapToRegistry   escapedName: 'create-react-app',
+13 silly mapToRegistry   name: 'create-react-app',
+13 silly mapToRegistry   rawSpec: '',
+13 silly mapToRegistry   spec: 'latest',
+13 silly mapToRegistry   type: 'tag' }
+14 silly mapToRegistry uri https://registry.npmjs.org/create-react-app
+15 silly fetchOtherPackageData /Applications/MAMP/htdocs/html/my-app
+16 silly cache add args [ '/Applications/MAMP/htdocs/html/my-app', null ]
+17 verbose cache add spec /Applications/MAMP/htdocs/html/my-app
+18 silly cache add parsed spec Result {
+18 silly cache add   raw: '/Applications/MAMP/htdocs/html/my-app',
+18 silly cache add   scope: null,
+18 silly cache add   escapedName: null,
+18 silly cache add   name: null,
+18 silly cache add   rawSpec: '/Applications/MAMP/htdocs/html/my-app',
+18 silly cache add   spec: '/Applications/MAMP/htdocs/html/my-app',
+18 silly cache add   type: 'local' }
+19 error addLocal Could not install /Applications/MAMP/htdocs/html/my-app
+20 silly fetchPackageMetaData Error: ENOENT: no such file or directory, open '/Applications/MAMP/htdocs/html/my-app'
+20 silly fetchPackageMetaData     at Error (native)
+20 silly fetchPackageMetaData  error for /Applications/MAMP/htdocs/html/my-app { Error: ENOENT: no such file or directory, open '/Applications/MAMP/htdocs/html/my-app'
+20 silly fetchPackageMetaData     at Error (native)
+20 silly fetchPackageMetaData   errno: -2,
+20 silly fetchPackageMetaData   code: 'ENOENT',
+20 silly fetchPackageMetaData   syscall: 'open',
+20 silly fetchPackageMetaData   path: '/Applications/MAMP/htdocs/html/my-app' }
+21 verbose request uri https://registry.npmjs.org/create-react-app
+22 verbose request no auth needed
+23 info attempt registry request try #1 at 5:06:56 PM
+24 verbose request id f9eb9832652ccff8
+25 verbose etag W/"592f7af5-b19e"
+26 verbose lastModified Thu, 01 Jun 2017 02:24:53 GMT
+27 http request GET https://registry.npmjs.org/create-react-app
+28 http 304 https://registry.npmjs.org/create-react-app
+29 verbose headers { date: 'Wed, 07 Jun 2017 20:06:57 GMT',
+29 verbose headers   via: '1.1 varnish',
+29 verbose headers   'cache-control': 'max-age=300',
+29 verbose headers   etag: 'W/"592f7af5-b19e"',
+29 verbose headers   age: '162',
+29 verbose headers   connection: 'keep-alive',
+29 verbose headers   'x-served-by': 'cache-lax8645-LAX',
+29 verbose headers   'x-cache': 'HIT',
+29 verbose headers   'x-cache-hits': '1',
+29 verbose headers   'x-timer': 'S1496866017.387176,VS0,VE1',
+29 verbose headers   vary: 'Accept-Encoding' }
+30 silly get cb [ 304,
+30 silly get   { date: 'Wed, 07 Jun 2017 20:06:57 GMT',
+30 silly get     via: '1.1 varnish',
+30 silly get     'cache-control': 'max-age=300',
+30 silly get     etag: 'W/"592f7af5-b19e"',
+30 silly get     age: '162',
+30 silly get     connection: 'keep-alive',
+30 silly get     'x-served-by': 'cache-lax8645-LAX',
+30 silly get     'x-cache': 'HIT',
+30 silly get     'x-cache-hits': '1',
+30 silly get     'x-timer': 'S1496866017.387176,VS0,VE1',
+30 silly get     vary: 'Accept-Encoding' } ]
+31 verbose etag https://registry.npmjs.org/create-react-app from cache
+32 verbose get saving create-react-app to /Users/tomibolo/.npm/registry.npmjs.org/create-react-app/.cache.json
+33 verbose correctMkdir /Users/tomibolo/.npm correctMkdir not in flight; initializing
+34 silly rollbackFailedOptional Starting
+35 silly rollbackFailedOptional Finishing
+36 silly runTopLevelLifecycles Finishing
+37 silly install printInstalled
+38 verbose stack Error: ENOENT: no such file or directory, open '/Applications/MAMP/htdocs/html/my-app'
+38 verbose stack     at Error (native)
+39 verbose cwd /Applications/MAMP/htdocs/html
+40 error Darwin 15.6.0
+41 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "create-react-app" "/Applications/MAMP/htdocs/html/my-app"
+42 error node v6.10.1
+43 error npm  v3.10.10
+44 error path /Applications/MAMP/htdocs/html/my-app
+45 error code ENOENT
+46 error errno -2
+47 error syscall open
+48 error enoent ENOENT: no such file or directory, open '/Applications/MAMP/htdocs/html/my-app'
+49 error enoent ENOENT: no such file or directory, open '/Applications/MAMP/htdocs/html/my-app'
+49 error enoent This is most likely not a problem with npm itself
+49 error enoent and is related to npm not being able to find a file.
+50 verbose exit [ -2, true ]
