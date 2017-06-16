@@ -2,41 +2,39 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { userLoginRequest } from '../../actions/loginAction';
+import { userLoginRequest } from '../../actions/authActions';
+import { getUsersRequest } from '../../actions/usersActions';
 
 //Styles
 require('../Login.css');
 
-class LoginForm extends Component
-{
+class LoginForm extends Component {
 
-	constructor()
-	{
+	constructor() {
+
 		super();
 		this.state = {
 			email : '',
 			password: ''
 		}
-
 		this.onChange = this.onChange.bind(this);
 		this.onSubmit = this.onSubmit.bind(this);
 	}
 
-	onChange(e)
-	{
+	//onChange function
+	onChange(e){
 		this.setState({ [e.target.name] : e.target.value });
 	}
 
-	onSubmit(e)
-	{
+	//onSubmit function
+	onSubmit(e){
 		e.preventDefault();
 
 		this.props.userLoginRequest(this.state)
-			.then(
-				() => {
-					this.props.history.push('/')
-				}
-			)
+			.then( () => {
+				this.props.getUsersRequest();
+				this.props.history.push('/');
+			} )
 	}
 
 	render()
@@ -81,4 +79,4 @@ LoginForm.propTypes = {
 	userLoginRequest: PropTypes.func.isRequired
 }
 
-export default connect( (state) => { return {} }, { userLoginRequest } )(LoginForm);
+export default connect( (state) => { return {} }, { userLoginRequest, getUsersRequest } )(LoginForm);

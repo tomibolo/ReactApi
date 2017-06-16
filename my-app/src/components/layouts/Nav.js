@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { logout } from '../../actions/authActions';
+import { userLogoutRequest} from '../../actions/authActions';
 
 class Nav extends Component
 {
+
 	logout(e) {
     e.preventDefault();
-    this.props.logout();
+    this.props.userLogoutRequest();
   }
 
 	render()
@@ -27,7 +28,7 @@ class Nav extends Component
 			logButton = <li className="pull-right" role="presentation"><NavLink to="/login" exact activeClassName="active">Login</NavLink></li>;
 		}	else {
 			contenidoButton = <li role="presentation"><NavLink to="/contenido" exact activeClassName="active">Contenido</NavLink></li>;
-			logButton = <li className="pull-right"><a href="#" onClick={this.logout.bind(this)}>Logout</a></li>;
+			logButton = <li className="pull-right"><a onClick={this.logout.bind(this)}>Logout</a></li>;
 		}
 
 		return (
@@ -50,7 +51,7 @@ class Nav extends Component
 
 Nav.propTypes = {
   auth: PropTypes.object.isRequired,
-  logout: PropTypes.func.isRequired
+  userLogoutRequest: PropTypes.func.isRequired
 }
 
 function mapStateToProps(state) {
@@ -59,4 +60,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { logout })(Nav);
+export default connect(mapStateToProps, { userLogoutRequest })(Nav);

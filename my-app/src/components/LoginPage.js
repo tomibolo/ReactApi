@@ -1,6 +1,5 @@
 
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 //Components
 import Nav from './layouts/Nav';
@@ -11,7 +10,6 @@ class LoginPage extends Component
 {
 	render()
 	{
-		const { userLoginRequest } = this.props;
 		return (
 				<div>
 					<Nav />
